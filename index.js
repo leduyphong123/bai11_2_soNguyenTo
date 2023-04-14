@@ -6,27 +6,24 @@ if (number > 20) {
 }
 for (N; N < 1000; N++) {
     if (count < number) {
-        checkSNT(N);
-        if (checkSNT(N) == true) {
+        if (checkValue(N) == true) {
             document.write(N + "<br/>");
             count++;
         }
-    } else {
-        break;
     }
 }
 
-function checkSNT(value) {
-    if (value == 2) {
+function checkValue(N) {
+    if (N == 2) {
         return true;
     } else {
-        for (let i = 2; i < value; i++) {
-            if (value % i == 0) {
+
+        for (let i = 2; i < N; i++) {
+            if (N % i == 0) {
                 return false;
             } else {
                 return true;
             }
         }
     }
-
 }
